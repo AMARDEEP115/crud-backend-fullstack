@@ -23,7 +23,7 @@ userRouter.post("/register",(req,res)=>{
 
 userRouter.get("/",async(req,res)=>{
     let all=await userModel.find();
-    res.send("Home Page");
+    res.send(all);
 });
 
 userRouter.post("/login",async(req,res)=>{
