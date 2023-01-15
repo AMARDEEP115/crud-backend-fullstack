@@ -11,6 +11,10 @@ const app=express();
 app.use(cors({origin:"*"}));
 // app.usecors({origin:"*"});
 
+app.get("/",(req,res)=>{
+    res.send({"msg":"Home Page","to explore go to":"/users or /notes"});
+});
+
 app.use(express.json());
 
 app.use("/users",userRouter);
